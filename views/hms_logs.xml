@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="action_logs" model="ir.actions.act_window">
+            <field name="name">Logs</field>
+            <field name="res_model">hospitalms.logs</field>
+        </record>
+        <record id="logs_tree_view" model="ir.ui.view">
+            <field name="name">logs tree view </field>
+            <field name="model">hospitalms.logs</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_uid"/>
+                    <field name="create_date"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem id="logs_menu_item" name="logs"
+                  parent="hms_root_menu"
+                  action="action_logs"
+                />
+    </data>
+</odoo>
